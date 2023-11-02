@@ -10,17 +10,16 @@ import pkg_resources
 import moviepy.editor as mp
 from termcolor import colored
 
-import win32gui
-import win32con
+# from win32.win32gui import FindWindow, ShowWindow, SetForegroundWindow, SW_RESTORE
 
-def bring_window_to_top(window_title):
-    hwnd = win32gui.FindWindow(None, window_title)
+# def bring_window_to_top(window_title):
+#     hwnd = FindWindow(None, window_title)
 
-    if hwnd:
-        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-        win32gui.SetForegroundWindow(hwnd)
-    else:
-        pass
+#     if hwnd:
+#         ShowWindow(hwnd, SW_RESTORE)
+#         SetForegroundWindow(hwnd)
+#     else:
+#         pass
 
 # def block_keys():
 #     for i in range(150):
@@ -40,12 +39,12 @@ def get_ip_address():
         ip_matches = re.findall(r'IPv4 Address[^\d]+(\d+\.\d+\.\d+\.\d+)', ipconfig_result)
 
         if ip_matches:
-            return str("As you wish "+ip_matches[0])
+            return ip_matches[0]
         else:
             return ""
         
     except Exception as e:
-        return str(e)
+        return ""
 
 def play_video():
     easter_video_path = pkg_resources.resource_filename('arpit', 'assets/easter_video.mp4')
@@ -88,7 +87,7 @@ def get_input():
         else: get_input()
     
 def main():
-    bring_window_to_top("MoviePy")
+    # bring_window_to_top("MoviePy")
     play_video()
     get_input()
         
