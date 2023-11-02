@@ -7,28 +7,10 @@ import subprocess
 import webbrowser
 import time, random
 import pkg_resources
-import keyboard
+import pyautogui as pg
 import moviepy.editor as mp
 from termcolor import colored
 
-import win32gui
-import win32con
-
-def bring_window_to_top(window_title):
-    hwnd = win32gui.FindWindow(None, window_title)
-
-    if hwnd:
-        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-        win32gui.SetForegroundWindow(hwnd)
-    else:
-        pass
-
-def block_keys():
-    for i in range(150):
-        keyboard.block_key(i)
-def unblock_keys():
-    for i in range(150):
-        keyboard.unblock_key(i)
 
 def type_text(text):
     for char in text:
@@ -72,28 +54,25 @@ def play_audio(path='assets/audio.ogg'):
         print(f"An error occurred: {e}")
     finally:
         pygame.quit()
-        
-def get_input():
-        will_you_text = colored('Will you? ', 'red', attrs=['reverse', 'blink'])
-        print(will_you_text, end=" ")
-        user_input = input()
-        
-        if user_input.lower() in ["yes", "y"]:
-            play_audio('assets/yes_audio.mp3')
-            webbrowser.open('https://www.linktr.ee/arpy8')
-            
-        elif user_input.lower() in ["no", "n"]:
-            ip = get_ip_address()
-            colored_ip = colored(ip, 'red') 
-            type_text(colored_ip)
-        else: get_input()
-    
+
 def main():
-    bring_window_to_top("MoviePy")
-    block_keys()
     play_video()
-    unblock_keys()
-    get_input()
+    
+    will_you_text = colored('Will you? ', 'red', attrs=['reverse', 'blink'])
+    print(will_you_text, end=" ")
+    
+    pg.hotkey('alt', 'tab')
+    
+    user_input = input()
+    
+    if user_input.lower() in ["yes", "y"]:
+        play_audio('assets/yes_audio.mp3')
+        webbrowser.open('https://www.linktr.ee/arpy8')
+        
+    elif user_input.lower() in ["no", "n"]:
+        ip = get_ip_address()
+        colored_ip = colored(ip, 'red') 
+        type_text(colored_ip)
         
 if __name__ == "__main__":
     main()
