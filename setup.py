@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="arpit",
-    version="0.1.1.7",
+    version="0.1.1.8",
     author="Arpit Sengar (arpy8)",
     author_email="arpitsengar99@gmail.com",
     description="Hi stranger! ssup?",
@@ -13,7 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/arpy8/arpit",
     packages=find_packages(),
-    install_requires=["pygame", "moviepy", "termcolor", "pyautogui", "subprocess", "webbrowser", "pkg_resources", "re", "time", "random"],
+    install_requires=["pygame", "moviepy", "termcolor", "pyautogui"],
     entry_points={
         "console_scripts": [
             "arpit=arpit.player:main",

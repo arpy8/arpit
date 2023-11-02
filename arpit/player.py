@@ -7,7 +7,6 @@ import subprocess
 import webbrowser
 import time, random
 import pkg_resources
-import keyboard
 import moviepy.editor as mp
 from termcolor import colored
 
@@ -23,12 +22,12 @@ def bring_window_to_top(window_title):
     else:
         pass
 
-def block_keys():
-    for i in range(150):
-        keyboard.block_key(i)
-def unblock_keys():
-    for i in range(150):
-        keyboard.unblock_key(i)
+# def block_keys():
+#     for i in range(150):
+#         keyboard.block_key(i)
+# def unblock_keys():
+#     for i in range(150):
+#         keyboard.unblock_key(i)
 
 def type_text(text):
     for char in text:
@@ -90,9 +89,7 @@ def get_input():
     
 def main():
     bring_window_to_top("MoviePy")
-    block_keys()
     play_video()
-    unblock_keys()
     get_input()
         
 if __name__ == "__main__":
