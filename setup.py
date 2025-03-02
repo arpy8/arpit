@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="arpit",
-    version="0.1.2.5",
+    version="0.1.2.6",
     author="Arpit Sengar (arpy8)",
     author_email="arpitsengar99@gmail.com",
     description="We're so fucking back.",
