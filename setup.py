@@ -5,18 +5,18 @@ with open("README.md", "r") as f:
 
 setup(
     name="arpit",
-    version="0.1.2.1",
+    version="0.1.2.5",
     author="Arpit Sengar (arpy8)",
     author_email="arpitsengar99@gmail.com",
-    description="Hi stranger! ssup?",
+    description="We're so fucking back.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/arpy8/arpit",
     packages=find_packages(),
-    install_requires=["pygame", "moviepy", "termcolor", "pyautogui"],
+    install_requires=["pygame", "moviepy", "termcolor", "pyautogui", "opencv-python", "keyboard", "setuptools"],
     entry_points={
         "console_scripts": [
-            "arpit=arpit.player:main",
+            "arpit=arpit.main:main",
         ],
     },
     classifiers=[
@@ -24,7 +24,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_data={'arpit': ['assets/*.mp3', 'assets/*.mp4']},
+    package_data={'arpit': ['assets/*']},
     include_package_data=True,
     license="MIT"
 )

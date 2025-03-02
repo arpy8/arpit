@@ -1,1 +1,1 @@
-from .player import *
+from .main import *

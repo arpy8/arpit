@@ -1,2 +1,2 @@
 [console_scripts]
-arpit = arpit.player:main
+arpit = arpit.main:main

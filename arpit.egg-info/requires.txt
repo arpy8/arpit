@@ -2,3 +2,6 @@ pygame
 moviepy
 termcolor
 pyautogui
+opencv-python
+keyboard
+setuptools
