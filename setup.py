@@ -5,10 +5,10 @@ with open("README.md", "r") as f:
 
 setup(
     name="arpit",
-    version="2.0.1",
+    version="2.0.2",
     author="Arpit Sengar (arpy8)",
     author_email="arpitsengar99@gmail.com",
-    description="We're so fucking back.",
+    description="Time to get things back on track.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/arpy8/arpit",
@@ -24,7 +24,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_data={'arpit': ['assets/*']},
     include_package_data=True,
     license="MIT"
 )
