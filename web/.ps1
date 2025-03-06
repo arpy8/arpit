@@ -80,7 +80,7 @@ if (Test-Command "pip3") {
 
 # Install arpit package
 Write-Host "Installing arpit package..."
-& $pipCmd install --user git+https://gitlab.com/arpy8/arpit
+& $pipCmd install --user git+https://github.com/arpy8/arpit
 
 # Check if arpit is installed and executable
 $arpitPath = Join-Path -Path $pythonScriptsDir -ChildPath "arpit.exe"
