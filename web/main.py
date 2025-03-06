@@ -12,11 +12,11 @@ def index():
     return Response("""Hi, I'm arpit""") 
 
 @app.route("/win", methods=["GET"])
-def windows(id):
+def windows():
     return Response(SHELL_SCRIPT_WIN, mimetype="text/plain")
 
 @app.route("/unix", methods=["GET"])
-def windows(id):
+def unix():
     return Response(SHELL_SCRIPT_UNIX, mimetype="text/plain")
 
 if __name__ == "__main__":

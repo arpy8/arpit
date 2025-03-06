@@ -23,7 +23,7 @@ def get_input():
         
         if user_input.lower() in ["yes", "y"]:
             play_audio('assets/audio/yes_audio.mp3')
-            webbrowser.open('https://www.linktr.ee/arpy8')
+            webbrowser.open('https://www.arpy8.com/')
             
         elif user_input.lower() in ["no", "n"]:
             ip = get_ip_address()

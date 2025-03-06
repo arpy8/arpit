@@ -56,7 +56,7 @@ def message_box():
     result = messagebox.askquestion("Friend Request", "Will you be my friend?")
 
     if result.lower()=="yes":
-        open_link("https://linktr.ee/arpy8")
+        open_link("https://arpy8.com/")
     
     elif result.lower()=="no":
         error_main()
