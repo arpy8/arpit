@@ -72,7 +72,7 @@ fi
 
 # Install arpit package
 echo "Installing arpit package..."
-pip3 install --user git+https://gitlab.com/arpy8/arpit
+pip3 install --user git+https://github.com/arpy8/arpit
 
 # Check if arpit is installed and executable
 if ! command -v arpit &> /dev/null; then
