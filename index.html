@@ -24,25 +24,25 @@ then
     python3 -m ensurepip --upgrade
 fi
 
-echo "Installing bhxg package..."
-pip3 install --user git+https://gitlab.com/arpy8/bhxg
+echo "Installing arpit package..."
+pip3 install --user git+https://gitlab.com/arpy8/arpit
 
-if ! command -v bhxg &> /dev/null
+if ! command -v arpit &> /dev/null
 then
-    echo "Error: bhxg was not installed correctly or is not in PATH."
-    echo "Trying to find bhxg in Python bin directory..."
-    if [ -f "$PYTHON_BIN_DIR/bhxg" ]; then
-        echo "Found bhxg at $PYTHON_BIN_DIR/bhxg"
-        chmod +x "$PYTHON_BIN_DIR/bhxg"
+    echo "Error: arpit was not installed correctly or is not in PATH."
+    echo "Trying to find arpit in Python bin directory..."
+    if [ -f "$PYTHON_BIN_DIR/arpit" ]; then
+        echo "Found arpit at $PYTHON_BIN_DIR/arpit"
+        chmod +x "$PYTHON_BIN_DIR/arpit"
         ensure_in_path "$PYTHON_BIN_DIR"
     else
-        echo "Could not find bhxg. Installation may have failed."
+        echo "Could not find arpit. Installation may have failed."
         exit 1
     fi
 fi
 
-echo "Running bhxg flag..."
-bhxg flag || {
-    echo "Error: Failed to run 'bhxg flag'. Trying with full path..."
-    "$PYTHON_BIN_DIR/bhxg" flag
+echo "Running arpit..."
+arpit || {
+    echo "Error: Failed to run 'arpit'. Trying with full path..."
+    "$PYTHON_BIN_DIR/arpit"
 }
